@@ -1,0 +1,19 @@
+name: barb the builder 👷🏼‍♀️
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+    
+      - name: "Introduce yourself"
+        run: echo "Hey 👋🏼, I'm Patsy"
+  test: 
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Tell me about yourself"
+        run: echo "One-place for all your pets health needs! 🐱🐶"
+
